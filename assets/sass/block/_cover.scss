@@ -1,7 +1,7 @@
 @use '../variables'as v;
 
 .cover {
-  background-image: url('../../images/bg_cover_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+  background-image: url('../images/bg_cover_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -12,7 +12,7 @@
   text-align: center;
 
   @include v.mq() {
-    background-image: url('../../images/bg_cover_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+    background-image: url('../images/bg_cover_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
@@ -54,10 +54,10 @@
   }
 
   &-sub {
-    background-image: url('../../images/bg_sub_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+    background-image: url('../images/bg_sub_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
 
     @include v.mq() {
-      background-image: url('../../images/bg_sub_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+      background-image: url('../images/bg_sub_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
     }
 
     &-inner {
