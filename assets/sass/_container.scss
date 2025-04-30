@@ -1,0 +1,27 @@
+@use 'variables'as v;
+
+// -----------------------------------
+// Container
+// -----------------------------------
+
+.container {
+  margin-inline: auto;
+  max-width: v.$width-main;
+  
+  
+  @include v.mq() {
+    max-width: v.$width-sp;
+  }
+}
+
+// -----------------------------------
+// 各セクションの余白
+// -----------------------------------
+.header,
+.footer {
+  // padding-inline: 20px;
+  
+  @include v.mq(){
+    // padding-inline: 30px;
+  }
+}
