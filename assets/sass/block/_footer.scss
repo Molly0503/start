@@ -1,0 +1,43 @@
+@use '../variables'as v;
+
+.footer {
+  background-color: v.$c-main;
+  color: v.$c-white;
+  padding-block: 60px 50px;
+  padding-inline: 20px;
+  font-weight: 700;
+
+  @include v.mq() {
+    padding-block: 42px 32px;
+  }
+
+  a {
+    color: v.$c-white;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    column-gap: 30px;
+    @include v.rem(14);
+    margin-bottom: 20px;
+
+    @include v.mq() {
+      @include v.rem(12);
+      column-gap: 25px;
+      margin-bottom: 23px;
+    }
+  }
+
+  small {
+    font-family: v.$f-en;
+    @include v.rem(12);
+
+    @include v.mq() {
+      @include v.rem(10);
+    }
+  }
+}

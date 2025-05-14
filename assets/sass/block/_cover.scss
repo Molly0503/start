@@ -1,0 +1,79 @@
+@use '../variables'as v;
+
+.cover {
+  background-image: url('#{v.$pass}bg_cover_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  margin-top: 90px;
+  color: v.$c-white;
+  font-weight: bold;
+  text-align: center;
+
+  @include v.mq() {
+    background-image: url('#{v.$pass}bg_cover_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    margin-top: 60px;
+  }
+
+  &-inner {
+    position: relative;
+    width: 100vw;
+    height: 600px;
+
+    @include v.mq() {
+      height: 460px;
+    }
+  }
+
+  &-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-family: v.$f-en;
+    @include v.rem(160);
+
+    @include v.mq() {
+      @include v.rem(80);
+    }
+  }
+
+  &-catch {
+    @include v.rem(24);
+
+    @include v.mq() {
+      @include v.rem(20);
+    }
+  }
+
+  &-sub {
+    background-image: url('#{v.$pass}bg_sub_pc.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+
+    @include v.mq() {
+      background-image: url('#{v.$pass}bg_sub_sp.jpg'), linear-gradient(to right, #e30f27, #cc1578);
+    }
+
+    &-inner {
+      height: 190px;
+
+      @include v.mq() {
+        height: 160px;
+      }
+    }
+
+    h1 {
+      @include v.rem(40);
+
+      @include v.mq() {
+        @include v.rem(28);
+      }
+    }
+  }
+}

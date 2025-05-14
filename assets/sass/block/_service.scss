@@ -1,0 +1,69 @@
+@use '../variables'as v;
+
+.service {
+  &-container {
+    position: relative;
+    padding-bottom: 100px;
+
+    @include v.mq() {
+      padding-bottom: 60px;
+    }
+  }
+
+  &-bg {
+    font-family: v.$f-en;
+    @include v.rem(168);
+    font-weight: bold;
+    color: v.$c-gray;
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: -1;
+
+    @include v.mq() {
+      @include v.rem(70);
+      top: 0;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+
+    @include v.mq() {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+  }
+
+  &-item {
+    border-radius: 8px;
+    background-color: v.$c-white;
+    box-shadow: 0 3px 21px 0 rgba(0, 0, 0, .16);
+    text-align: center;
+    padding: 50px;
+
+    img {
+      @include v.mq() {
+        width: 60px;
+      }
+    }
+  }
+
+  .item-title {
+    @include v.rem(18);
+    margin-bottom: 20px;
+
+    @include v.mq() {
+      @include v.rem(16);
+    }
+  }
+
+  &-description {
+    @include v.rem(14);
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}

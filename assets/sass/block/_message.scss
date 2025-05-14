@@ -1,0 +1,60 @@
+@use '../variables'as v;
+
+.message {
+  padding-bottom: 100px;
+  text-align: center;
+  
+  @include v.mq() {
+    @include v.rem(15);
+    padding-bottom: 60px;
+  }
+
+  .section-title {
+    @include v.mq() {
+      @include v.rem(24);
+    }
+  }
+
+  .section-catch {
+    @include v.rem(18);
+    font-weight: 500;
+    margin-bottom: 40px;
+
+    @include v.mq() {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-content {
+    text-align: left;
+    max-width: 790px;
+    margin-inline: auto;
+    margin-bottom: 80px;
+
+    @include v.mq() {
+      margin-bottom: 50px;
+    }
+
+    img {
+      float: left;
+      margin-right: 25px;
+      margin-bottom: 25px;
+
+      @include v.mq() {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &-text {
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: .05em;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #349BF4;
+  }
+}

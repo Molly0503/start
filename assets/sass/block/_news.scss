@@ -1,0 +1,49 @@
+@use '../variables'as v;
+
+.news {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 90px;
+    width: 100%;
+    padding-bottom: 35px;
+
+    @include v.mq() {
+      flex-direction: column;
+      padding-bottom: 12px;
+    }
+  }
+
+  &-title {
+    text-wrap: nowrap;
+  }
+
+  &-list {
+    width: 100%;
+    font-weight: 500;
+    @include v.rem(15);
+  }
+
+  &-item {
+    border-bottom: v.$c-lightgray solid 1px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    padding-block: 15px;
+    line-height: 1.8;
+
+    @include v.mq() {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-date {
+    font-family: v.$f-en;
+  }
+
+  &-text {
+    @include v.mq() {
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use 'variables'as v;
+
+// -----------------------------------
+// Container
+// -----------------------------------
+
+.container {
+  margin-inline: auto;
+  max-width: v.$width-main;
+  
+  @include v.mq() {
+    max-width: v.$width-sp;
+  }
+}

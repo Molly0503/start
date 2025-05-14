@@ -1,0 +1,117 @@
+@use '../variables'as v;
+
+.header {
+  height: 90px;
+  padding-inline: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: v.$c-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include v.mq() {
+    height: 60px;
+    padding-inline: 20px 0;
+  }
+
+  img {
+    width: 167px;
+    height: auto;
+
+    @include v.mq() {
+      width: 107px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    column-gap: 30px;
+    font-weight: 700;
+
+    @include v.mq(pc) {
+      li a:hover {
+        color: v.$c-main;
+        opacity: 1;
+      }
+    }
+
+    @include v.mq() {
+      position: fixed;
+      left: 100%;
+      right: 0;
+      top: 0;
+      padding-left: 48px;
+      padding-top: 60px;
+      height: 100vh;
+      flex-direction: column;
+      row-gap: 25px;
+      @include v.rem(16);
+      background-color: v.$c-main;
+      transition: all 0.6s;
+
+      li a {
+        color: v.$c-white;
+      }
+
+      li a:hover {
+        opacity: .6;
+      }
+    }
+
+    &-active {
+      @include v.mq() {
+        left: 50%;
+      }
+    }
+  }
+
+  .hamburger-button {
+    background-color: v.$c-main;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 22px 16px;
+    z-index: 2;
+
+    &-bar {
+      background-color: v.$c-white;
+      width: 28px;
+      height: 2px;
+      transition: all 0.6s;
+    }
+
+    @include v.mq(pc) {
+      display: none;
+    }
+
+    &-open {
+      .hamburger-button-bar {
+        &-1st {
+          transform: translateY(10px) rotate(45deg);
+
+        }
+
+        &-2nd {
+          opacity: 0;
+        }
+
+        &-3rd {
+          transform: translateY(-10px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .home {
+    color: v.$c-main;
+
+    @include v.mq() {
+      color: v.$c-white;
+      opacity: .6;
+    }
+  }
+}
