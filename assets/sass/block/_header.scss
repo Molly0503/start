@@ -3,10 +3,8 @@
 .header {
   height: 90px;
   padding-inline: 70px;
-  position: fixed;
+ position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
   background-color: v.$c-white;
   display: flex;

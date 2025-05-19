@@ -72,10 +72,8 @@ section {
 .header {
   height: 90px;
   padding-inline: 70px;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
   background-color: #fff;
   display: flex;
@@ -180,7 +178,6 @@ section {
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  margin-top: 90px;
   color: #fff;
   font-weight: bold;
   text-align: center;
@@ -191,7 +188,6 @@ section {
     background-size: cover;
     background-position: center;
     background-blend-mode: darken;
-    margin-top: 60px;
   }
 }
 .cover-inner {
